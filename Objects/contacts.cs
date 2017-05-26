@@ -41,5 +41,20 @@ namespace AddressBook.Objects
     {
       _address = newAddress;
     }
+    //static method//
+    public static List<Contact> GetAll()
+    {
+      return _instances;
+    }
+    //instance method//
+    public void Save()
+    {
+      _instances.Add(this);
+    }
+    //ClearAll method//
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }

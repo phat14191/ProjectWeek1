@@ -1,0 +1,30 @@
+<h1>Phat/s Address Book</h1>
+<!-- //the view engine interprets anything following the @ character as Razor code.// -->
+
+<!-- If we have no contact, let’s display a message sorry, nocontact, lick here to add. -->
+@if (Model.Count == 0) {
+    <h2>"Sorry, No CONTACT in your list!"</h2>
+    <h2>click here to <a href="/add_new_contact">ADD CONTACT!</a></h2>
+}
+<!-- Before, when we wanted to perform logic on information and display that information, we would have to output the logic from our HomeModule.cs file and pass it into a new view. But now, we can translate this directly into the HTML. -->
+
+else
+{
+    @foreach (var contacts in Model) {
+    <h4>Name: @contacts.GetName()</h4>
+    <h4>Phone number: @contacts.GetPhoneNumber()</h4>
+    <h4>Address: @contacts.GetAddress()</h4>
+    }
+    <a href="/add_new_contact">ADD CONTACT</a>
+
+}
+
+<!-- Example lesson: Looping with Razor CD
+If we added at least 1 contact, to clear all, let’s display a message on the site that says Clear all contacts. -->
+
+@if (Model.Count >= 1) {
+    <h3>To DELETE ALL YOUR CONTACTS click </h3>
+    <form action="/all_contacts_deleted" method="post">
+        <button type="submit" name="clear all">CLEAR ALL CONTACTS</button>
+    </form>
+}
