@@ -41,6 +41,7 @@ namespace AddressBook.Objects
     {
       _address = newAddress;
     }
+    //more commit .... //
     //static method//
     public static List<Contact> GetAll()
     {
