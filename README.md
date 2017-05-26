@@ -10,7 +10,7 @@ _Using Nancy, make an address book where you can store contact information for p
 
 ## Setup/Installation Requirements
 1. Open PowerShell
-2. Git clone or download at https://github.com/phat14191/ProjectWeek1.git
+2. Git clone or download at https://github.com/phat14191/ProjectWeek1
 3. cd Project-Week1
 4. _To run this app, you need: "dnu restore" and "dnx kestrel"
 5. open [http://localhost:5004](http://localhost:5004) on Chrome web browser
